@@ -1,3 +1,23 @@
 p{
     color: red;
 }
+
+#menuItems{
+    text-align: center;
+}
+
+/* Trying to get the menu items to be perfectly in the center */
+#menu{
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+.menu{
+    text-align: center;
+    justify-content: center;
+}
+
+.accordion-button{
+    text-align: center;
+}
