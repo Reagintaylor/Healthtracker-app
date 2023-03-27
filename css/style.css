@@ -21,3 +21,11 @@ p{
 .accordion-button{
     text-align: center;
 }
+
+#addBtn{
+    display: flex;
+}
+
+.addBtn{
+    flex-direction: row;
+}
