@@ -1,8 +1,7 @@
 console.log("Is this thing on?")
+// Just check if the jQuery is working
+// $(document).ready(function(){  alert("Ready!");  });
 
-// Step #1 Create variables
-// Step #2 Create a button with a pop up with input fields
-// Step #3 create the elements
 
 var exerciseFormEl = $('#exercise-form');
 var exerciseListEl = $('#exercise-list');
@@ -52,22 +51,22 @@ var handleFormSubmit = function (event) {
   exerciseFormEl.on('Submit', handleFormSubmit);
 
 
-  // Autocomplete widget
-$(function () {
-    var exerciseNames = [
-      'Glute Bridges',
-      'Romanian Deadlifts',
-      'Hip Thrusts',
-      'Kick Feets',
-      'Toe Touches',
-      'Hip mobility exercises',
-      'Bicycles',
-      'Kickbacks',
-    ];
-    $('#floatingExercise').autocomplete({
-      source: exerciseNames,
-    });
-  });
+//   // Autocomplete widget
+// $(function () {
+//     var exerciseNames = [
+//       'Glute Bridges',
+//       'Romanian Deadlifts',
+//       'Hip Thrusts',
+//       'Kick Feets',
+//       'Toe Touches',
+//       'Hip mobility exercises',
+//       'Bicycles',
+//       'Kickbacks',
+//     ];
+//     $('#floatingExercise').autocomplete({
+//       source: exerciseNames,
+//     });
+//   });
   
 //   // Datepicker widget
 //   $(function () {
@@ -76,3 +75,5 @@ $(function () {
 //       changeYear: true,
 //     });
 //   });
+
+console.log('end')
