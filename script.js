@@ -5,5 +5,7 @@ console.log("Is this thing on?")
 // Step #3 create the elements
 
 
-var =""
+var exerciseListEl=$("#exercise-list")
+
+// append the made up list items to the list element above
 
