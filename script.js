@@ -14,10 +14,10 @@ var weightInputEl = $('#floatingWeights');
 // Create elements with the classes of the checked boxes in bootstrap
 
 
-var printExercises = function (exercise, setsreps, weights) {
+var printExercises = function (exercise, setsreps, weight) {
     var listEl = $('<li>');
     var checkEl = $('<input>').attr('type', 'checkbox')
-    var listDetail = exercise.concat(' for ', setsreps).concat(" ", weights);
+    var listDetail = exercise.concat(' for ', setsreps, weight)
     listEl.addClass('list-group-item').text(listDetail);
     listEl.appendTo(checkEl);
     checkEl.appendTo(exerciseListEl);
@@ -34,13 +34,14 @@ var handleFormSubmit = function (event) {
     var weightInput = weightInputEl.val();
   
     if (!exerciseInput || !setrepInput || !weightInput) {
-    //    var closeBtn = $('#close-btn')
-    //    closeBtn.attr('data-bs-target', '#exampleModal')
+       
       console.log('Please fill out the form!');
       return;
+    //   var closeBtn = $('#close-btn')
+    //    closeBtn.attr('data-bs-target', '#exampleModal')
     }
   
-    printExercises(exerciseInput, setrepInput, weightInput);
+    printExercises(exerciseInput, setrepInput);
   
     // resets form
     exerciseInputEl.val('');
@@ -48,7 +49,14 @@ var handleFormSubmit = function (event) {
     weightInputEl.val('');
 };
 
-  exerciseFormEl.on('Submit', handleFormSubmit);
+//   exerciseFormEl.on('Submit', handleFormSubmit);
+//   $('#save-btn').on('Submit', handleFormSubmit);
+  $('#save-btn').on('click', handleFormSubmit);
+  $("#save-btn").on("click", handleFormSubmit, function(){
+    alert("The paragraph was clicked.");
+  });
+
+  
 
 
 //   // Autocomplete widget
