@@ -56,10 +56,10 @@ var handleFormSubmit = function (event) {
     alert("The paragraph was clicked.");
   });
 
-  
+//   Add a delete function
 
 
-//   // Autocomplete widget
+//   // Autocomplete widget for extra fanciness
 // $(function () {
 //     var exerciseNames = [
 //       'Glute Bridges',
