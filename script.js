@@ -22,11 +22,11 @@ var printExercises = function (exercise, setsreps, weight) {
     listEl.appendTo(checkEl);
     checkEl.appendTo(exerciseListEl);
     // listEl.appendTo(exerciseListEl);
-    console.log('sup')
+    console.log('appending to list?')
 };
 
 var handleFormSubmit = function (event) {
-    console.log('hey')
+    console.log('handleformSubmit working')
     event.preventDefault();
   
     var exerciseInput = exerciseInputEl.val();
@@ -37,11 +37,25 @@ var handleFormSubmit = function (event) {
        
       console.log('Please fill out the form!');
       return;
-    //   var closeBtn = $('#close-btn')
-    //    closeBtn.attr('data-bs-target', '#exampleModal')
+
+
     }
+
+    printExercises(exerciseInput, setrepInput); // set weight in this function as well if you can
+
+
+    // not working :/
+    // create user object from submission
+    var exercise = {
+        exerciseListed: exerciseInputEl.value.trim(),
+        setsReps: setrepInputEl.value.trim(),
+        weight: weightInputEl.value.trim(),
+        };
+
+    // set new submission to local storage 
+    localStorage.setItem("exercise", JSON.stringify(exercise));
   
-    printExercises(exerciseInput, setrepInput);
+    
   
     // resets form
     exerciseInputEl.val('');
@@ -53,6 +67,7 @@ var handleFormSubmit = function (event) {
 //   $('#save-btn').on('Submit', handleFormSubmit);
   $('#save-btn').on('click', handleFormSubmit);
   $("#save-btn").on("click", handleFormSubmit, function(){
+      console.log("Click works")
     alert("The paragraph was clicked.");
   });
 
@@ -83,5 +98,3 @@ var handleFormSubmit = function (event) {
 //       changeYear: true,
 //     });
 //   });
-
-console.log('end')

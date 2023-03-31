@@ -29,3 +29,7 @@ p{
 .addBtn{
     flex-direction: row;
 }
+
+#floatingExercise, #floatingSetsReps, #floatingWeights{
+    color: black;
+}
