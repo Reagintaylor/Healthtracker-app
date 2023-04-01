@@ -47,9 +47,9 @@ var handleFormSubmit = function (event) {
     // not working :/
     // create user object from submission
     var exercise = {
-        exerciseListed: exerciseInputEl.value.trim(),
-        setsReps: setrepInputEl.value.trim(),
-        weight: weightInputEl.value.trim(),
+        exerciseListed: exerciseInputEl.val().trim()== undefined ? '' : exerciseInputEl.val().trim(),
+        setsReps: setrepInputEl.val().trim(),
+        weight: weightInputEl.val().trim(),
         };
 
     // set new submission to local storage 
