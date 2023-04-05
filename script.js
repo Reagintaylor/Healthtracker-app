@@ -13,6 +13,7 @@ var weightInputEl = $('#floatingWeights');
 // append the made up list items to the list element above
 // Create elements with the classes of the checked boxes in bootstrap
 
+var exercises = [];
 
 var printExercises = function (exercise, setsreps, weight) {
     var listEl = $('<li>');
@@ -23,6 +24,21 @@ var printExercises = function (exercise, setsreps, weight) {
     checkEl.appendTo(exerciseListEl);
     // listEl.appendTo(exerciseListEl);
     console.log('appending to list?')
+
+    for (var i = 0; i < exercises.length; i++) {
+        var exercise = exercises[i];
+    
+        var listEl = $('<li>');
+        listEl.textContent = todo;
+        listEl.setAttribute("data-index", i);
+    
+        var button = document.createElement("button");
+        button.textContent = "delete";
+    
+        li.appendChild(button);
+        todoList.appendChild(li);
+      }
+
 };
 
 var handleFormSubmit = function (event) {
