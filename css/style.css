@@ -33,3 +33,10 @@ p{
 #floatingExercise, #floatingSetsReps, #floatingWeights{
     color: black;
 }
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 2px;
+    /* add something to put space between the list items */
+}

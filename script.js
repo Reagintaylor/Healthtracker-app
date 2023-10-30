@@ -8,12 +8,12 @@ var exerciseListEl = $('#exercise-list');
 var exerciseInputEl = $('#floatingExercise');
 var setrepInputEl = $('#floatingSetsReps');
 var weightInputEl = $('#floatingWeights');
-
+var exerciseCount = $("#ex-count")
 
 // append the made up list items to the list element above
 // Create elements with the classes of the checked boxes in bootstrap
 
-var exercises = [];
+
 
 var printExercises = function (exercise, setsreps, weight) {
     var listEl = $('<li>');
@@ -23,13 +23,19 @@ var printExercises = function (exercise, setsreps, weight) {
     listEl.appendTo(checkEl);
     checkEl.appendTo(exerciseListEl);
     // listEl.appendTo(exerciseListEl);
-    console.log('appending to list?')
+    
+};
+
+var exercises = [];
+function renderExes() {
+    exerciseListEl.innerHTML = "";
+    exerciseCount.textContent = exercises.length;
 
     for (var i = 0; i < exercises.length; i++) {
         var exercise = exercises[i];
     
         var listEl = $('<li>');
-        listEl.textContent = todo;
+        listEl.textContent = exercise;
         listEl.setAttribute("data-index", i);
     
         var button = document.createElement("button");
@@ -38,8 +44,10 @@ var printExercises = function (exercise, setsreps, weight) {
         li.appendChild(button);
         todoList.appendChild(li);
       }
-
 };
+
+
+// I need a for loop to add the 
 
 var handleFormSubmit = function (event) {
     console.log('handleformSubmit working')
@@ -82,10 +90,6 @@ var handleFormSubmit = function (event) {
 //   exerciseFormEl.on('Submit', handleFormSubmit);
 //   $('#save-btn').on('Submit', handleFormSubmit);
   $('#save-btn').on('click', handleFormSubmit);
-  $("#save-btn").on("click", handleFormSubmit, function(){
-      console.log("Click works")
-    alert("The paragraph was clicked.");
-  });
 
 //   Add a delete function
 
